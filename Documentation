@@ -1,0 +1,24 @@
+# My Code
+from gpiozero import LightSensor, Buzzer
+import time
+import pigpio
+
+pi = pigpio.pi()
+
+
+ldr = LightSensor(4)  # alter if using a different pin
+while True:
+    light = float(ldr.value)
+    red = (light * -255) + 255
+    green = (((light - .5)**2)*-600) +255
+    blue = light * 255
+    pi.set_PWM_dutycycle(17, red)
+    pi.set_PWM_dutycycle(22, blue)
+    pi.set_PWM_dutycycle(24, green)
+    time.sleep(1)
+    print(ldr.value)
+
+## Tutorials I used
+[Adafruit](https://learn.adafruit.com/rgb-led-strips?view=all) - Tutorial helped me figure out how to use the MOSFETS
+[Dordnung](https://dordnung.de/raspberrypi-ledstrip/) - Tutorial taught me how to use pigpio to control my LED light strip
+[RaspberryPi](https://projects.raspberrypi.org/en/projects/physical-computing/10) - Tutorial helped me add the LDR sensor to my code and to the circuits
