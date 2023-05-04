@@ -1,0 +1,6 @@
+
+| Tutorial I used| Link to it   | Use for it   |
+| ------------- | ------------- |------------- |
+| Ada Fruit| [Link](https://learn.adafruit.com/rgb-led-strips?view=all)| This explained how to use MOSFETS in my circuitry|
+| Dordnung | [Link](https://dordnung.de/raspberrypi-ledstrip/)| This helped me figure out how to write the code for my project and how to set up my circuits|
+| RaspberryPi | [Link](https://projects.raspberrypi.org/en/projects/physical-computing/10)| This helped me figure out how to use the LDR in my code and on the breadboard|
